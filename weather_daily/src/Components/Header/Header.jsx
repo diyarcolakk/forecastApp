@@ -1,15 +1,29 @@
-import { useContext } from "react"
-import { myContext } from "../../Context/Context"
+import { useContext, useState } from "react";
+import { myContext } from "../../Context/Context";
+import "./Header.css";
+
+
 
 const Header = () => {
+  const newContext = useContext(myContext);
+  const { cities } = newContext;
 
-const newContext = useContext(myContext)
+  const [selectedCity,setSelectedCity] = useState("İstanbul")
 
-const {cities} = newContext
-
+  console.log(selectedCity)
 
   return (
-    <div>{cities}</div>
-  )
-}
-export default Header
+    <>
+      <div className="header">
+        <select defaultValue="İstanbul" className="option-styler" onChange={(e) => {setSelectedCity(e.target.value)}}>
+          {cities.map((city, index) => (
+            <option key={index} className="select-selecter">
+              {city}
+            </option>
+          ))}
+        </select>
+      </div>
+    </>
+  );
+};
+export default Header;
