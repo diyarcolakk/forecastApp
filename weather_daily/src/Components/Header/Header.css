@@ -1,11 +1,12 @@
 .header {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 50vh;
+  align-items: flex-start;
+  height: 40vh;
 }
 
 .option-styler {
+  margin-top: 2rem;
   width: 12vw;
   font-size: 1rem;
   text-align: center;

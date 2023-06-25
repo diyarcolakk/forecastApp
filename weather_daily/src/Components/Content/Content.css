@@ -1,15 +1,15 @@
 .content-container {
-  width: 100%;
-  height: 50vh;
+  margin: 0 auto;
+  width: 90%;
+  height: 40vh;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
 .main-container {
-  height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,14 +17,37 @@
 }
 
 .grid-containers {
-  border: 5px solid purple;
   height: 100%;
   text-align: center;
+  border: 4px solid yellow;
+  border-radius: 20%;
+  transition: 1s ease;
 }
 
 .grid-containers:hover {
   cursor: pointer;
-  background-color: white;
+  background-color: whitesmoke;
   opacity: 0.9;
   color: red;
+  transition: 1s ease;
+  transform: scale(1.1);
+  border: 4px solid red;
+}
+
+.top-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.weather-celcius {
+  font-size: 3rem;
+}
+
+.icon-colors {
+  color: yellow;
+}
+
+.grid-containers:hover .icon-colors {
+  color: red;
+  transition: 1s ease;
 }
