@@ -5,7 +5,7 @@ const ForecastDetail = ({ weather, dt, main, wind, cityName }) => {
     month: "long",
     day: "numeric",
   };
-console.log(weather)
+
   return (
     <div className="main-container">
       <h2>{weather[0].main}</h2>
