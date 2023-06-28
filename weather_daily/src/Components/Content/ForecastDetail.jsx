@@ -5,13 +5,13 @@ const ForecastDetail = ({ weather, dt, main, wind, cityName }) => {
     month: "long",
     day: "numeric",
   };
-
+console.log(weather)
   return (
     <div className="main-container">
-      <p>{new Date(dt * 1000).toLocaleDateString("tr-TR", options)}</p>
+      <h2>{weather[0].main}</h2>
+      <p>{new Date(dt * 1000).toLocaleDateString("en-EN", options)}</p>
       <h1>{main.temp} ⁰C </h1>
       <h3>{cityName}</h3>
-
       <p>
         {main.temp_max} / {main.temp_min} ⁰C{" "}
       </p>

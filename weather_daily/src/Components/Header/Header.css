@@ -25,3 +25,9 @@
 option:hover {
   background-color: white;
 }
+
+@media screen and (max-width: 964px) {
+  .option-styler {
+    width: 200px;
+  }
+}
